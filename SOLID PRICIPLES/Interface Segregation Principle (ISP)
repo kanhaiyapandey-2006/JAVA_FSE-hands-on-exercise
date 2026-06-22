@@ -1,0 +1,79 @@
+I – Interface Segregation Principle (ISP)
+Definition
+
+Clients should not be forced to implement methods they do not use.
+
+Better to create small interfaces than one large interface.
+
+Bad Example
+interface Worker {
+
+    void work();
+
+    void eat();
+}
+
+Robot does not eat.
+
+class Robot implements Worker {
+
+    public void work() {
+    }
+
+    public void eat() {
+        // unnecessary
+    }
+}
+
+Violation of ISP.
+
+Good Example
+interface Workable {
+    void work();
+}
+
+interface Eatable {
+    void eat();
+}
+
+Human:
+
+class Human implements Workable, Eatable {
+
+    public void work() {
+    }
+
+    public void eat() {
+    }
+}
+
+Robot:
+
+class Robot implements Workable {
+
+    public void work() {
+    }
+}
+Real-Life Example
+
+Printer
+
+Simple printer:
+
+Print
+
+Advanced printer:
+
+Print
+Scan
+Fax
+
+Simple printer shouldn't implement scan() and fax().
+
+Benefits
+
+✔ Smaller interfaces
+
+✔ Reduced dependencies
+
+✔ More flexibility

@@ -1,0 +1,78 @@
+S – Single Responsibility Principle (SRP)
+Definition
+
+A class should have only one reason to change.
+
+In simple words, one class should perform only one job.
+
+Bad Example
+class Employee {
+
+    void calculateSalary() {
+        // salary calculation
+    }
+
+    void generateReport() {
+        // report generation
+    }
+
+    void sendEmail() {
+        // send email
+    }
+}
+Problem
+
+This class has three responsibilities:
+
+Salary calculation
+Report generation
+Email sending
+
+If email requirements change, this class changes.
+
+If report requirements change, this class changes again.
+
+This violates SRP.
+
+Good Example
+class Employee {
+    void calculateSalary() {
+    }
+}
+
+class ReportService {
+    void generateReport() {
+    }
+}
+
+class EmailService {
+    void sendEmail() {
+    }
+}
+
+Now every class has only one responsibility.
+
+Real-Life Example
+
+Hospital:
+
+❌ One person:
+
+Doctor
+Receptionist
+Pharmacist
+
+✅ Separate people:
+
+Doctor treats patients
+Receptionist manages appointments
+Pharmacist gives medicines
+Benefits
+
+✔ Easier maintenance
+
+✔ Easier debugging
+
+✔ Better code reusability
+
+✔ Reduced coupling

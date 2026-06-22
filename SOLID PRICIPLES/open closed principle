@@ -1,0 +1,75 @@
+O – Open Closed Principle (OCP)
+Definition
+
+Software entities should be open for extension but closed for modification.
+
+You should add new functionality without changing existing code.
+
+Bad Example
+class AreaCalculator {
+
+    double calculateArea(String shape) {
+
+        if(shape.equals("circle"))
+            return 3.14*5*5;
+
+        else if(shape.equals("rectangle"))
+            return 10*5;
+
+        return 0;
+    }
+}
+Problem
+
+Suppose Triangle is added.
+
+We need to modify the class again.
+
+This violates OCP.
+
+Good Example
+Step 1: Create Interface
+interface Shape {
+    double area();
+}
+Step 2: Implement Classes
+class Circle implements Shape {
+
+    public double area() {
+        return 3.14 * 5 * 5;
+    }
+}
+
+class Rectangle implements Shape {
+
+    public double area() {
+        return 10 * 5;
+    }
+}
+Step 3: Add New Shape
+class Triangle implements Shape {
+
+    public double area() {
+        return 0.5 * 10 * 8;
+    }
+}
+
+No existing code is modified.
+
+Real-Life Example
+
+Mobile charger.
+
+A socket remains the same.
+
+Different chargers can be connected without changing the socket.
+
+Benefits
+
+✔ Easy extension
+
+✔ Reduced bugs
+
+✔ More maintainable
+
+✔ Better scalability

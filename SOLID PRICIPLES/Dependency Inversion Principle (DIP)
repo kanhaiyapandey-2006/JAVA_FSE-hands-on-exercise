@@ -1,0 +1,71 @@
+D – Dependency Inversion Principle (DIP)
+Definition
+
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
+
+Depend on interfaces, not concrete classes.
+
+Bad Example
+class WiredKeyboard {
+
+}
+
+class Computer {
+
+    WiredKeyboard keyboard = new WiredKeyboard();
+}
+
+Problem:
+
+Computer depends directly on WiredKeyboard.
+
+Cannot easily replace with WirelessKeyboard.
+
+Good Example
+Interface
+interface Keyboard {
+
+}
+Implementations
+class WiredKeyboard implements Keyboard {
+
+}
+
+class WirelessKeyboard implements Keyboard {
+
+}
+High-Level Module
+class Computer {
+
+    Keyboard keyboard;
+
+    Computer(Keyboard keyboard) {
+        this.keyboard = keyboard;
+    }
+}
+
+Usage:
+
+Keyboard k = new WirelessKeyboard();
+
+Computer c = new Computer(k);
+
+Computer doesn't care whether keyboard is wired or wireless.
+
+Real-Life Example
+
+Switch and bulb.
+
+Switch should not depend on a specific bulb.
+
+Any bulb can be connected.
+
+Benefits
+
+✔ Loose coupling
+
+✔ Easier testing
+
+✔ More flexible
+
+✔ Supports Dependency Injection

@@ -1,0 +1,65 @@
+L – Liskov Substitution Principle (LSP)
+Definition
+
+Derived classes should be substitutable for their base classes without affecting correctness.
+
+A child class should behave like its parent.
+
+Bad Example
+class Bird {
+    void fly() {
+        System.out.println("Flying");
+    }
+}
+
+class Penguin extends Bird {
+
+    void fly() {
+        throw new UnsupportedOperationException();
+    }
+}
+
+Problem:
+
+Penguins cannot fly.
+
+Thus Penguin cannot properly substitute Bird.
+
+Violation of LSP.
+
+Good Design
+class Bird {
+}
+
+class FlyingBird extends Bird {
+
+    void fly() {
+        System.out.println("Flying");
+    }
+}
+
+class Sparrow extends FlyingBird {
+}
+
+class Penguin extends Bird {
+}
+
+Now everything works correctly.
+
+Real-Life Example
+
+Vehicle → Car
+
+Car can substitute Vehicle.
+
+Vehicle → Bicycle
+
+If Vehicle expects engine(), Bicycle cannot satisfy it.
+
+Benefits
+
+✔ Proper inheritance
+
+✔ Avoids unexpected behavior
+
+✔ Better maintainability
