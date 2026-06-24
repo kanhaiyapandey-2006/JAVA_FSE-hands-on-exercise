@@ -1,0 +1,165 @@
+1. Creational Patterns
+
+These deal with object creation.
+
+Singleton Pattern
+Definition
+
+Ensures that only one object of a class is created.
+
+Real-Life Example
+Printer Spooler
+Logger
+Database Connection
+Configuration Manager
+Implementation
+class Singleton {
+
+    private static Singleton instance;
+
+    private Singleton() {
+    }
+
+    public static Singleton getInstance() {
+
+        if(instance == null)
+            instance = new Singleton();
+
+        return instance;
+    }
+}
+
+Usage:
+
+Singleton obj1 = Singleton.getInstance();
+Singleton obj2 = Singleton.getInstance();
+
+System.out.println(obj1 == obj2);
+
+Output:
+
+true
+Advantages
+
+✔ Saves memory
+
+✔ Global access point
+
+✔ Prevents multiple objects
+
+Factory Pattern 
+Definition
+
+Creates objects without exposing creation logic.
+
+Without Factory
+Car c = new Car();
+Bike b = new Bike();
+Truck t = new Truck();
+
+Client needs to know every class.
+
+With Factory
+
+Step 1
+
+interface Vehicle{
+    void drive();
+}
+
+Step 2
+
+class Car implements Vehicle{
+
+    public void drive(){
+        System.out.println("Car");
+    }
+}
+
+class Bike implements Vehicle{
+
+    public void drive(){
+        System.out.println("Bike");
+    }
+}
+
+Step 3
+
+class VehicleFactory{
+
+    public Vehicle getVehicle(String type){
+
+        if(type.equals("car"))
+            return new Car();
+
+        else
+            return new Bike();
+    }
+}
+
+Usage:
+
+VehicleFactory vf = new VehicleFactory();
+
+Vehicle v = vf.getVehicle("car");
+
+v.drive();
+Real-Life Example
+
+Restaurant Menu
+
+Customer orders food.
+
+Kitchen decides how to prepare it.
+
+Customer doesn't know the creation process.
+
+Advantages
+
+ Loose coupling
+
+ Easy extension
+
+ Supports OCP
+
+ Builder Pattern 
+Definition
+
+Used when objects have many parameters.
+
+Without Builder:
+
+Student s =
+new Student("Rahul",22,"Delhi","B.Tech",987654321);
+
+Confusing constructor.
+
+With Builder:
+
+Student s = new StudentBuilder()
+            .setName("Rahul")
+            .setAge(22)
+            .setCity("Delhi")
+            .build();
+Real-Life Example
+
+Ordering Pizza
+
+Choose:
+
+Size
+Cheese
+Toppings
+
+Then build pizza.
+
+Advantages
+
+ Readable code
+
+ Immutable objects
+
+ Flexible construction
+
+
+
