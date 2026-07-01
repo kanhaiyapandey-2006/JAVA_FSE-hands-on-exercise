@@ -1,0 +1,57 @@
+Analysis of Algorithms is a fundamental aspect of computer science that involves evaluating performance of algorithms and programs
+Efficiency is measured in terms of time and space.
+
+Algorithm analysis is an important part of computational complexity theory, which provides theoretical estimation for the required resources of an algorithm to solve a specific computational problem. Analysis of algorithms is the determination of the amount of time and space resources required to execute it.
+
+To predict the behavior of an algorithm for large inputs (Scalable Software).
+It is much more convenient to have simple measures for the efficiency of an algorithm than to implement the algorithm and test the efficiency every time a certain parameter in the underlying computer system changes.
+More importantly, by analyzing different algorithms, we can compare them to determine the best one for our purpose.
+
+
+Asymptotic analysis evaluates an algorithm’s performance based on input size, ignoring actual running time. It measures the order of growth of time or space; for example, linear search grows linearly, while binary search grows logarithmically.
+
+1. Worst Case Analysis (Mostly used) 
+In the worst-case analysis, we calculate the upper bound on the running time of an algorithm. We must know the case that causes a maximum number of operations to be executed.
+
+For Linear Search, the worst case happens when the element to be searched (x) is not present in the array. When x is not present, the search() function compares it with all the elements of arr[] one by one.
+This is the most commonly used analysis of algorithms . Most of the time we consider the case that causes maximum operations.
+
+2. Best Case Analysis (Very Rarely used) 
+In the best-case analysis, we calculate the lower bound on the running time of an algorithm. We must know the case that causes a minimum number of operations to be executed.
+For linear search, the best case occurs whe
+n x is present at the first location. The number of operations in the best case is constant (not dependent on n). So the order of growth of time taken in terms of input size is constant.
+
+3. Average Case Analysis (Rarely used) 
+In average case analysis, we take all possible inputs and calculate the computing time for all of the inputs. Sum all the calculated values and divide the sum by the total number of inputs.
+Assuming all cases are equally likely in linear search, the average case is computed by summing all cases and dividing by n+1n+1n+1, to account for the possibility that the element is absent.
+
+Big O notation is used to describe the time or space complexity of algorithms. Big-O is a way to express an upper bound of an algorithm’s time or space complexity.
+
+Describes the asymptotic behavior (order of growth of time or space in terms of input size) of a function, not its exact value.
+Can be used to compare the efficiency of different algorithms or data structures.
+It provides an upper limit on the time taken by an algorithm in terms of the size of the input. We mainly consider the worst case scenario of the algorithm to find its time complexity in terms of Big O
+Big O Definition
+Given two functions f(n) and g(n), we say that f(n) is O(g(n)) if there exist constants c > 0 and n0 >= 0 such that f(n) <= c*g(n) for all n >= n0.
+
+In simpler terms, f(n) is O(g(n)) if f(n) grows no faster than c*g(n) for all n >= n0 where c and n0 are constants.
+
+In the analysis of algorithms, asymptotic notations are used to evaluate the performance of an algorithm by providing an exact order of growth.
+
+Tteta Notation provides an exact bound on time or space complexity as it bounds a function from both upper and lower side,
+Compared to Big O or Big Omega, It gives more information in cases where we have exact bound available and should be preferred. For example, for Merge Sort which always takes order of n Log n time, we can say that time is Θ(n Log n) and for Binary Search, we can say worst case time is Θ(Log n).
+Definition: Let g and f be the function from the set of natural numbers to itself. The function f is said to be Θ(g), if there are constants c1, c2 > 0 and a natural number n0 such that c1* g(n) ≤ f(n) ≤ c2 * g(n) for all n ≥ n0
+
+Θ (g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 ≤ c1 * g(n) ≤ f(n) ≤ c2 * g(n) for all n ≥ n0}
+Note: Θ(g) is a set
+
+The above definition means, if f(n) is theta of g(n), then the value f(n) is always between c1 * g(n) and c2 * g(n) for large values of n (n ≥ n0). The definition of theta also requires that f(n) must be non-negative for values of n greater than n0. 
+
+In the analysis of algorithms, asymptotic notations are used to denote a lower bound on asymptotic time taken by algorithm.
+
+It analyses the best-case situation of algorithm. It provides a equal or lower limit on the time taken by an algorithm in terms of the size of the input.
+Definition : Given two functions g(n) and f(n), we say that f(n) = Ω(g(n)), if there exists constants c > 0 and n0 >= 0 such that f(n) >= c*g(n) for all n >= n0. In simpler terms, f(n) is Ω(g(n)) if f(n) will always grow faster than c*g(n) for all n >= n0 where c and n0 are constants.
+We use it when we want to represent that the algorithm will take at least a certain amount of time or space.
+For any algorithm, we can say that its time complexity is  Ω(1) as it represents a constant value and in this notation, we only have to guarantee a lower bound. However it is always recommended to find as close lower bound as possible.
+
+
+
