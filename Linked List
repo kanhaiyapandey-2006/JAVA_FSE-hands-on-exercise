@@ -1,0 +1,37 @@
+Linked List
+Single Linked List
+Structure
+class Node{
+    int data;
+    Node next;
+
+    Node(int data){
+        this.data=data;
+        next=null;
+    }
+}
+Insert Operation
+Node head=new Node(10);
+head.next=new Node(20);
+head.next.next=new Node(30);
+Traverse
+Node temp=head;
+
+while(temp!=null){
+    System.out.print(temp.data+" ");
+    temp=temp.next;
+}
+
+Complexity: O(n)
+
+Delete Node
+head=head.next;
+
+Complexity: O(1)
+
+Types of Linked List
+Singly Linked List
+10 → 20 → 30 → NULL
+Doubly Linked List
+NULL ← 10 ↔ 20 ↔ 30 → NULL
+Circular Linked List

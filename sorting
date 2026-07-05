@@ -1,0 +1,186 @@
+1. Analysis of Algorithms
+What is an Algorithm?
+
+An algorithm is a finite sequence of steps used to solve a problem.
+
+Characteristics
+Input
+Output
+Definiteness
+Finiteness
+Effectiveness
+Why Data Structures and Algorithms (DSA)?
+Efficient use of memory
+Faster execution
+Better problem solving
+Required in interviews and competitive programming
+Types of Data Structures
+Linear Data Structures
+Array
+Linked List
+Stack
+Queue
+Non-Linear Data Structures
+Tree
+Graph
+Heap
+Time Complexity Notations
+Notation	Meaning
+O(n)	Worst Case
+Ω(n)	Best Case
+Θ(n)	Average Case
+Common Complexities
+Complexity	Example
+O(1)	Array access
+O(log n)	Binary Search
+O(n)	Linear Search
+O(n log n)	Merge Sort
+O(n²)	Bubble Sort
+O(2ⁿ)	Recursion
+Example: Time Complexity
+public class Example {
+    public static void main(String[] args) {
+        int n = 5;
+
+        for(int i=0;i<n;i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+Time Complexity: O(n)
+
+Nested Loop Example
+for(int i=0;i<n;i++) {
+    for(int j=0;j<n;j++) {
+        System.out.println(i+" "+j);
+    }
+}
+
+Time Complexity: O(n²)
+
+Recursive Example
+public static void fun(int n){
+    if(n==0)
+        return;
+
+    System.out.println(n);
+    fun(n-1);
+}
+
+Time Complexity: O(n)
+
+2. Sorting
+Bubble Sort
+Theory
+Compare adjacent elements.
+Swap if wrong order.
+Largest element reaches end after each pass.
+Complexity
+Best: O(n)
+Average: O(n²)
+Worst: O(n²)
+Java Code
+public class BubbleSort {
+    public static void main(String[] args) {
+        int arr[]={5,4,3,2,1};
+
+        for(int i=0;i<arr.length-1;i++){
+            for(int j=0;j<arr.length-i-1;j++){
+                if(arr[j]>arr[j+1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+
+        for(int x:arr)
+            System.out.print(x+" ");
+    }
+}
+Insertion Sort
+Theory
+Inserts each element into its proper position.
+Complexity
+Best: O(n)
+Average: O(n²)
+Worst: O(n²)
+Java Code
+for(int i=1;i<arr.length;i++){
+    int key=arr[i];
+    int j=i-1;
+
+    while(j>=0 && arr[j]>key){
+        arr[j+1]=arr[j];
+        j--;
+    }
+
+    arr[j+1]=key;
+}
+Quick Sort
+Theory
+Divide and conquer algorithm.
+Select pivot and partition array.
+Complexity
+Best: O(n log n)
+Average: O(n log n)
+Worst: O(n²)
+Java Code
+static void quickSort(int arr[], int low, int high){
+    if(low<high){
+        int pi=partition(arr,low,high);
+
+        quickSort(arr,low,pi-1);
+        quickSort(arr,pi+1,high);
+    }
+}
+
+static int partition(int arr[],int low,int high){
+    int pivot=arr[high];
+    int i=low-1;
+
+    for(int j=low;j<high;j++){
+        if(arr[j]<pivot){
+            i++;
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+    }
+
+    int temp=arr[i+1];
+    arr[i+1]=arr[high];
+    arr[high]=temp;
+
+    return i+1;
+}
+Merge Sort
+Theory
+Divide array into halves.
+Sort each half.
+Merge them.
+Complexity
+Best: O(n log n)
+Average: O(n log n)
+Worst: O(n log n)
+Java Code
+static void mergeSort(int arr[], int l, int r){
+    if(l<r){
+        int m=(l+r)/2;
+
+        mergeSort(arr,l,m);
+        mergeSort(arr,m+1,r);
+
+        merge(arr,l,m,r);
+    }
+}
+Heap Sort
+Theory
+Uses Binary Heap.
+Create max heap.
+Extract maximum repeatedly.
+Complexity
+Best: O(n log n)
+Average: O(n log n)
+Worst: O(n log n)

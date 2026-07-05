@@ -1,0 +1,41 @@
+3. Arrays
+Array Representation
+int arr[] = {10,20,30,40,50};
+
+Memory representation:
+
+Index : 0 1 2 3 4
+Value :10 20 30 40 50
+Array Traversal
+Theory
+
+Visit every element once.
+
+Code
+int arr[]={10,20,30,40};
+
+for(int i=0;i<arr.length;i++){
+    System.out.println(arr[i]);
+}
+
+Complexity: O(n)
+
+Searching in Array
+Code
+int key=30;
+
+for(int i=0;i<arr.length;i++){
+    if(arr[i]==key){
+        System.out.println("Found");
+    }
+}
+
+Complexity: O(n)
+
+When to Use Arrays?
+
+Use arrays when:
+
+Size is fixed
+Fast random access required
+Less insertion/deletion operations
