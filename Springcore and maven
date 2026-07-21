@@ -1,0 +1,120 @@
+1. Spring Framework
+Spring is an open-source Java framework for enterprise application development.
+It simplifies Java development by providing reusable components.
+It supports dependency injection and aspect-oriented programming.
+Spring promotes loosely coupled and maintainable applications.
+It is widely used with Spring Boot for modern applications.
+2. Advantages of Spring
+Reduces boilerplate code and simplifies development.
+Supports Dependency Injection (DI) and Inversion of Control (IoC).
+Easy integration with databases, web services, and security.
+Makes applications modular and easy to test.
+Provides high scalability and flexibility.
+3. Maven Introduction
+Maven is a project management and build automation tool.
+It manages project dependencies automatically.
+It standardizes project structure.
+It compiles, tests, and packages Java applications.
+It uses the pom.xml file for project configuration.
+4. Maven Project Structure
+src/main/java contains application source code.
+src/main/resources stores configuration files.
+src/test/java contains test classes.
+pom.xml manages dependencies and plugins.
+target/ contains compiled project files.
+5. Maven Dependencies
+Dependencies are external libraries used in a project.
+They are declared inside pom.xml.
+Maven downloads them automatically.
+It manages library versions efficiently.
+It avoids manual JAR file management.
+6. pom.xml
+pom.xml is the Project Object Model file.
+It stores project information and dependencies.
+It defines plugins and build configurations.
+It specifies project version and packaging.
+Maven reads this file during project build.
+7. settings.xml
+settings.xml stores Maven configuration settings.
+It defines local repository location.
+It can configure proxy and authentication.
+It manages remote repositories.
+It is stored outside the project directory.
+8. Spring IoC (Inversion of Control)
+IoC means Spring manages object creation.
+Developers don't create objects manually.
+Spring container creates and manages beans.
+It reduces tight coupling.
+It improves code maintainability.
+9. Dependency Injection (DI)
+DI is a feature of IoC.
+Spring injects required objects automatically.
+It supports constructor and setter injection.
+DI improves code reusability.
+It makes testing easier.
+10. Spring Bean
+A Bean is an object managed by Spring.
+Beans are created inside the IoC container.
+They contain business logic.
+Beans can be singleton or prototype.
+They are configured using XML or annotations.
+11. BeanFactory
+BeanFactory is the basic Spring container.
+It creates beans only when required (lazy loading).
+It consumes less memory.
+It is suitable for small applications.
+It provides basic IoC functionality.
+12. ApplicationContext
+ApplicationContext is an advanced Spring container.
+It loads beans eagerly by default.
+It supports events and internationalization.
+It provides more enterprise features.
+It is preferred over BeanFactory.
+13. BeanFactory vs ApplicationContext
+BeanFactory uses lazy initialization.
+ApplicationContext uses eager initialization.
+ApplicationContext supports events.
+BeanFactory provides basic features.
+ApplicationContext is widely used in Spring projects.
+14. XML-Based Bean Configuration
+Beans are defined in an XML file.
+Dependencies are configured in XML.
+Spring reads the XML during startup.
+It separates configuration from code.
+Suitable for legacy Spring applications.
+15. Annotation-Based Configuration
+Uses annotations instead of XML.
+Common annotations include @Component, @Service, and @Repository.
+Reduces XML configuration.
+Improves code readability.
+Preferred in modern Spring applications.
+16. Aspect-Oriented Programming (AOP)
+AOP separates cross-cutting concerns.
+It is used for logging and security.
+Improves modularity.
+Uses aspects, advice, and join points.
+Reduces duplicate code.
+17. Spring MVC
+Spring MVC is a web framework.
+It follows the Model-View-Controller architecture.
+It separates business logic from presentation.
+Controllers handle user requests.
+It is used for developing web applications.
+18. Spring ORM
+ORM stands for Object Relational Mapping.
+It maps Java objects to database tables.
+Spring integrates with Hibernate and JPA.
+It reduces SQL coding.
+It simplifies database operations.
+19. Spring Boot
+Spring Boot simplifies Spring application development.
+It provides auto-configuration.
+It includes an embedded Tomcat server.
+It reduces configuration effort.
+It is ideal for developing REST APIs and microservices.
+20. Practical Benefits of Spring
+Simplifies enterprise Java development.
+Promotes loosely coupled architecture.
+Supports rapid application development.
+Improves code maintainability and testing.
+Integrates easily with Maven, Hibernate, and databases.
