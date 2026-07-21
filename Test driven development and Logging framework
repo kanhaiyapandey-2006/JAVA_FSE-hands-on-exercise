@@ -1,0 +1,118 @@
+1. Introduction to TDD
+Test Driven Development (TDD) is a software development approach where tests are written before code.
+It follows the "Test First" principle.
+TDD improves code quality and reliability.
+It helps detect bugs early in development.
+It follows the Red-Green-Refactor cycle.
+
+2. TDD Cycle
+Red: Write a test that fails.
+Green: Write minimum code to pass the test.
+Refactor: Improve the code without changing functionality.
+Repeat this cycle for every new feature.
+This ensures clean and maintainable code.
+
+3. Introduction to Unit Testing
+Unit testing verifies individual methods or classes.
+It checks whether each unit works correctly.
+It helps find bugs at an early stage.
+Unit tests are fast and easy to automate.
+JUnit is the most popular unit testing framework in Java.
+
+4. JUnit Framework
+JUnit is an open-source Java testing framework.
+It provides annotations like @Test and @BeforeEach.
+Assertions verify expected outputs.
+Tests can be executed automatically.
+It simplifies Java application testing.
+
+5. Test Structure
+AAA stands for Arrange, Act, and Assert.
+Arrange prepares test data.
+Act executes the method under test.
+Assert verifies the expected result.
+This structure makes tests easy to understand.
+
+6. Advanced JUnit Features
+Parameterized tests run the same test with different inputs.
+Test suites combine multiple test classes.
+Exception testing checks expected exceptions.
+Timeout testing limits execution time.
+Execution order controls the sequence of tests.
+
+7. Mockito Basics
+Mockito is a Java mocking framework.
+It creates mock objects for testing.
+Stubbing defines mock behavior.
+Verify checks method interactions.
+It isolates code from external dependencies.
+
+8. Testing Spring Applications with JUnit & Mockito
+Spring Boot supports unit and integration testing.
+Controllers, services, and repositories can be tested separately.
+@SpringBootTest loads the Spring context.
+@MockBean replaces real dependencies with mocks.
+It improves application reliability.
+
+9. Mocking External Dependencies
+Mock databases instead of using real ones.
+Mock REST APIs to avoid network calls.
+Mock file operations during testing.
+Mocking makes tests faster and independent.
+It ensures consistent test results.
+
+10. Introduction to Automation Testing
+Automation testing uses tools to execute tests automatically.
+It reduces manual effort and saves time.
+Automated tests are faster than manual tests.
+It improves testing accuracy.
+It is widely used in Continuous Integration (CI).
+
+11. Types of Automated Tests
+Unit tests check individual methods.
+Integration tests verify module interactions.
+Functional tests validate business requirements.
+End-to-End tests verify complete workflows.
+Performance tests measure speed and scalability.
+
+12. Automation Testing Process
+Select the appropriate automation tool.
+Define the scope of automation.
+Design and develop test scripts.
+Execute automated tests.
+Maintain and update test scripts regularly.
+
+13. Test Automation Frameworks
+Data-Driven Framework uses external test data.
+Keyword-Driven Framework uses predefined keywords.
+Hybrid Framework combines multiple approaches.
+Frameworks improve code reuse.
+They simplify test maintenance.
+
+14. Popular Automation Tools
+Selenium automates web applications.
+Appium is used for mobile testing.
+JUnit and TestNG are Java testing frameworks.
+Cucumber supports Behavior Driven Development (BDD).
+Cypress is popular for modern web application testing.
+
+15. SLF4J
+SLF4J is a logging facade for Java.
+It supports different logging frameworks.
+Parameterized logging improves performance.
+It provides log levels like INFO, WARN, and ERROR.
+It simplifies application logging.
+
+16. Lombok – Introduction & Core Annotations
+Lombok reduces Java boilerplate code.
+@Getter and @Setter generate accessor methods.
+@Data combines common annotations.
+@Builder simplifies object creation.
+It improves code readability and productivity.
+
+17. Lombok – Advanced Usage & IDE Integration
+@Slf4j automatically creates a logger.
+@Value creates immutable classes.
+Advanced @Builder supports flexible object creation.
+Annotation processing must be enabled in the IDE.
+Lombok works with IntelliJ IDEA and Eclipse through plugins.
